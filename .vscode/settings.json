@@ -1,3 +1,22 @@
 {
+  "python.testing.pytestArgs": ["tests"],
+  "python.autoComplete.extraPaths": ["backend/__pypackages__/3.10lib"],
+  "python.analysis.extraPaths": ["backend/__pypackages__/3.10/lib"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/__pycache__": true,
+    "**/__pytest__cache": true,
+    "**.pytest_cache": true,
+    "**.idea": true
+  },
+  "python.formatting.yapfPath": "black",
+  "python.linting.enabled": true,
   "python.formatting.provider": "black"
 }
