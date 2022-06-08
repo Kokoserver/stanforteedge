@@ -1,0 +1,490 @@
+{% extends 'base.html' %} {% block title %} home {% endblock %} {% block main %}
+<!-- hero section -->
+<header class="w-full relative" id="hero">
+  <div class="container-swiper hero-swiper relative">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide py-24" style="height: 100% ; 
+      background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.664),
+      rgb(8, 8, 8)
+    ),
+    
+    url(../../static/img/icons/bg.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    object-fit: cover; 
+    background-position: top left;">
+        <div class="container mx-auto md:p-6 transition-all">
+          <div class="flex flex-col-reverse md:flex-row justify-between items-center py-12">
+            <div class="md:w-1/2 space-y-6 text-center md:text-left">
+              <h1 x-intersect="fadeup($el)" class="text-3xl md:text-4xl font-bold uppercase text-base-100">
+                driving inclusion through tech
+              </h1>
+              <p class="text-base text-base-200" x-intersect="fadeup($el)">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                obcaecati
+              </p>
+              <a href="#" x-intersect="fadeup($el)"
+                class="transition-all duration-500 rounded-bl-xl inline-block px-5 py-3 bg-secondary-focus text-base-100 shadow-xl hover:shadow-md hover:text-base-200 capitalize">About
+                us</a>
+            </div>
+            <div class="md:w-1/2">
+              <!-- <img
+                x-intersect="fadeup($el)"
+                class="w-full h-full object-cover"
+                src="{{url_for('static', path='img/icons/hero-img.svg')}}"
+                alt="hero image"
+              /> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide py-24" style="height: 100%; 
+      background-image: linear-gradient(
+      to left bottom,
+      rgba(0, 0, 0, 0.664),
+      rgb(8, 8, 8)
+    ),
+    
+    url(../../static/img/icons/bg.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    object-fit: cover; 
+    background-position: top left;">
+        <div class="container mx-auto md:p-6 transition-all">
+          <div class="flex flex-col-reverse md:flex-row justify-between items-center py-10">
+            <div class="md:w-1/2 space-y-6 text-center md:text-left">
+              <h1 x-intersect="fadeup($el)" class="text-3xl md:text-4xl font-bold uppercase text-base-100">
+                driving inclusion through tech
+              </h1>
+              <p class="text-base text-base-200" x-intersect="fadeup($el)">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                obcaecati
+              </p>
+              <a href="#" x-intersect="fadeup($el)"
+                class="transition-all duration-500 rounded-bl-xl inline-block px-5 py-3 bg-secondary-focus text-base-100 shadow-xl hover:shadow-md hover:text-base-200 capitalize">About
+                us</a>
+            </div>
+            <div class="md:w-1/2">
+              <!-- <img
+                x-intersect="fadeup($el)"
+                class="w-full h-full object-cover"
+                src="{{url_for('static', path='img/icons/hero-img.svg')}}"
+                alt="hero image"
+              /> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide py-24" style="height: 100% ; 
+      background-image: linear-gradient(
+      to left bottom,
+      rgba(0, 0, 0, 0.295),
+      rgba(8, 8, 8, 0.158)
+    ),
+    
+    url(../../static/img/icons/bg.jpg); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    object-fit: cover; 
+    background-position: top left;">
+        <div class="container mx-auto md:p-6 transition-all">
+          <div class="flex flex-col-reverse md:flex-row justify-between items-center py-10">
+            <div class="md:w-1/2 space-y-6 text-center md:text-left">
+              <h1 x-intersect="fadeup($el)" class="text-3xl md:text-4xl font-bold uppercase text-base-100">
+                driving inclusion through tech
+              </h1>
+              <p class="text-base text-base-200" x-intersect="fadeup($el)">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+                obcaecati
+              </p>
+              <a href="#" x-intersect="fadeup($el)"
+                class="transition-all duration-500 rounded-bl-xl inline-block px-5 py-3 bg-secondary-focus text-base-100 shadow-xl hover:shadow-md hover:text-base-200 capitalize">About
+                us</a>
+            </div>
+            <div class="md:w-1/2">
+              <!-- <img
+                x-intersect="fadeup($el)"
+                class="w-full h-full object-cover"
+                src="{{url_for('static', path='img/icons/hero-img.svg')}}"
+                alt="hero image"
+              /> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!-- <div class="swiper-button-next "></div>
+      <div class="swiper-button-prev"></div> -->
+    <div class="swiper-pagination hero-pagination"></div>
+  </div>
+  <div class="hero-shape">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path
+        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+        class="shape-fill"></path>
+    </svg>
+  </div>
+</header>
+
+<!-- about us -->
+<section class="container mx-auto p-6 mb-14">
+  <h1 class="text-2xl text-secondary-focus capitalize text-center font-semibold" x-intersect="fadeup($el)">
+    what we do
+  </h1>
+  <div class="swiper wwd-swiper" x-intersect="fadeup($el)">
+    <div class="swiper-wrapper flex items-center justify-between py-10">
+      <div class="swiper-slide">
+        <div
+          class="flex justify-center items-center text-center flex-col w-96 transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+          <div class="pt-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                clip-rule="evenodd" />
+              <path
+                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h1 class="text-lg font-semibold">ICT For Development</h1>
+            <p class="line-clamp-6">
+              we empower PWDs with digital skills and promote assistive
+              technology through our fellowship program and our digital
+              platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div
+          class="flex justify-center items-center text-center flex-col w-96 transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+          <div class="pt-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h1 class="text-lg font-semibold">ICT For Development</h1>
+            <p class="line-clamp-6">
+              we empower PWDs with digital skills and promote assistive
+              technology through our fellowship program and our digital
+              platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div
+          class="flex justify-center items-center text-center flex-col w-96 transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+          <div class="pt-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                clip-rule="evenodd" />
+              <path
+                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h1 class="text-lg font-semibold">ICT For Development</h1>
+            <p class="line-clamp-6">
+              we empower PWDs with digital skills and promote assistive
+              technology through our fellowship program and our digital
+              platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div
+          class="flex justify-center items-center text-center flex-col w-96 transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+          <div class="pt-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                clip-rule="evenodd" />
+              <path
+                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h1 class="text-lg font-semibold">ICT For Development</h1>
+            <p class="line-clamp-6">
+              we empower PWDs with digital skills and promote assistive
+              technology through our fellowship program and our digital
+              platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div
+          class="flex justify-center items-center text-center flex-col w-96 transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+          <div class="pt-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                clip-rule="evenodd" />
+              <path
+                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h1 class="text-lg font-semibold">ICT For Development</h1>
+            <p class="line-clamp-6">
+              we empower PWDs with digital skills and promote assistive
+              technology through our fellowship program and our digital
+              platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div
+          class="flex justify-center items-center text-center flex-col w-96 transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+          <div class="pt-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                clip-rule="evenodd" />
+              <path
+                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h1 class="text-lg font-semibold">ICT For Development</h1>
+            <p class="line-clamp-6">
+              we empower PWDs with digital skills and promote assistive
+              technology through our fellowship program and our digital
+              platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div
+          class="flex justify-center items-center text-center flex-col w-96 transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+          <div class="pt-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" viewBox="0 0 20 20"
+              fill="currentColor">
+              <path fill-rule="evenodd"
+                d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                clip-rule="evenodd" />
+              <path
+                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+            </svg>
+          </div>
+          <div class="card-body">
+            <h1 class="text-lg font-semibold">ICT For Development</h1>
+            <p class="line-clamp-6">
+              we empower PWDs with digital skills and promote assistive
+              technology through our fellowship program and our digital
+              platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination wwd-pagination"></div>
+  </div>
+</section>
+
+<!-- our portfolio -->
+<section" class="w-full">
+  <h1 class="text-2xl text-secondary capitalize text-center font-semibold" x-intersect="fadeup($el)">
+    Our portfolio
+  </h1>
+  <div class="container mx-auto overflow-hidden mb-14">
+    <div class="swiper project-swiper" x-intersect="fadeup($el)">
+      <div class="swiper-wrapper flex items-center justify-between py-10  ">
+        <div class="swiper-slide md:w-full">
+          <div
+            class="card md:card-side transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+            <figure class="px-3">
+              <img class="w-40" src="{{url_for('static', path='img/project/project-enabled.png')}}" alt="Shoes"
+                class="lightbox-img cursor-pointer" />
+            </figure>
+            <div class="card-body px-3 text-center md:text-left">
+              <h1 class="text-lg font-semibold text-secondary-focus">ICT For Development</h1>
+              <p class="line-clamp-6">
+                we empower PWDs with digital skills and promote assistive
+                technology through our fellowship program and our digital
+                platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+          <div class="swiper-slide md:w-full">
+          <div
+            class="card md:card-side transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+            <figure class="px-3">
+              <img class="w-40" src="{{url_for('static', path='img/project/project-enabled.png')}}" alt="Shoes"
+                class="lightbox-img cursor-pointer" />
+            </figure>
+            <div class="card-body px-3 text-center md:text-left">
+              <h1 class="text-lg font-semibold text-secondary-focus">ICT For Development</h1>
+              <p class="line-clamp-6">
+                we empower PWDs with digital skills and promote assistive
+                technology through our fellowship program and our digital
+                platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+          <div class="swiper-slide md:w-full">
+          <div
+            class="card md:card-side transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+            <figure class="px-3">
+              <img class="w-40" src="{{url_for('static', path='img/project/project-enabled.png')}}" alt="Shoes"
+                class="lightbox-img cursor-pointer" />
+            </figure>
+            <div class="card-body px-3 text-center md:text-left">
+              <h1 class="text-lg font-semibold text-secondary-focus">ICT For Development</h1>
+              <p class="line-clamp-6">
+                we empower PWDs with digital skills and promote assistive
+                technology through our fellowship program and our digital
+                platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+          <div class="swiper-slide md:w-full">
+          <div
+            class="card md:card-side transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+            <figure class="px-3">
+              <img class="w-40" src="{{url_for('static', path='img/project/project-enabled.png')}}" alt="Shoes"
+                class="lightbox-img cursor-pointer" />
+            </figure>
+            <div class="card-body px-3 text-center md:text-left">
+              <h1 class="text-lg font-semibold text-secondary-focus">ICT For Development</h1>
+              <p class="line-clamp-6">
+                we empower PWDs with digital skills and promote assistive
+                technology through our fellowship program and our digital
+                platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+          <div class="swiper-slide md:w-full">
+          <div
+            class="card md:card-side transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+            <figure class="px-3">
+              <img class="w-40" src="{{url_for('static', path='img/project/project-enabled.png')}}" alt="Shoes"
+                class="lightbox-img cursor-pointer" />
+            </figure>
+            <div class="card-body px-3 text-center md:text-left">
+              <h1 class="text-lg font-semibold text-secondary-focus">ICT For Development</h1>
+              <p class="line-clamp-6">
+                we empower PWDs with digital skills and promote assistive
+                technology through our fellowship program and our digital
+                platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+          <div class="swiper-slide md:w-full">
+          <div
+            class="card md:card-side transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+            <figure class="px-3">
+              <img class="w-40" src="{{url_for('static', path='img/project/project-enabled.png')}}" alt="Shoes"
+                class="lightbox-img cursor-pointer" />
+            </figure>
+            <div class="card-body px-3 text-center md:text-left">
+              <h1 class="text-lg font-semibold text-secondary-focus">ICT For Development</h1>
+              <p class="line-clamp-6">
+                we empower PWDs with digital skills and promote assistive
+                technology through our fellowship program and our digital
+                platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        
+      
+      </div>
+      <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+      <div class="swiper-pagination project-pagination"></div>
+    </div>
+  </div>
+  </section>
+
+  <!-- contact us -->
+  <section" class="w-full">
+    <div class="container mx-auto overflow-hidden my-20 text-base-100 px-6 ">
+      <div class="card w-full text-center md:px-10 py-12 bg-primary-focus rounded-bl-xl shadow-none">
+        <div class="card-body flex flex-col items-center space-y-2">
+          <h1 class="font-semibold text-3xl capitalize"  x-intersect="fadeup($el)">Contact us today</h1>
+          <p class="" >We are using cookies for no reason.</p>
+           <a href="{{request.url_for('contact')}}" x-intersect="fadeup($el)"
+                class="transition-all duration-500 rounded-bl-xl px-5 py-3 bg-secondary-focus text-base-100 shadow-xl hover:shadow-md w-40 hover:text-base-200 capitalize">Contact us</a>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <!-- our client -->
+    <section class="container mx-auto overflow-hidden mb-14">
+      <h1 class="text-2xl text-secondary-focus capitalize text-center font-semibold" x-intersect="fadeup($el)">
+        Our Clients/Partners
+      </h1>
+      <div class="swiper client-swiper" x-intersect="fadeup($el)">
+        <div class="swiper-wrapper flex items-center justify-between">
+          <div class="swiper-slide p-5">
+            <img src="{{url_for('static', path='img/client/us_consulate.png')}}" alt="Shoes"
+              class="transform hover:scale-90 transition-transform duration-500" />
+          </div>
+          <div class="swiper-slide p-5">
+            <img src="{{url_for('static', path='img/client/google.png')}}" alt="Shoes"
+              class="transform hover:scale-90 transition-transform duration-500" />
+          </div>
+          <div class="swiper-slide p-5">
+            <img src="{{url_for('static', path='img/client/access.png')}}" alt="Shoes"
+              class="transform hover:scale-90 transition-transform duration-500" />
+          </div>
+          <div class="swiper-slide p-5">
+            <img src="{{url_for('static', path='img/client/hacey.png')}}" alt="Shoes"
+              class="transform hover:scale-90 transition-transform duration-500" />
+          </div>
+          <div class="swiper-slide p-5">
+            <img src="{{url_for('static', path='img/client/ids.png')}}" alt="Shoes"
+              class="transform hover:scale-90 transition-transform duration-500" />
+          </div>
+          <div class="swiper-slide p-5">
+            <img src="{{url_for('static', path='img/client/parallelpoint.png')}}" alt="Shoes"
+              class="transform hover:scale-90 transition-transform duration-500" />
+          </div>
+          <div class="swiper-slide p-5">
+            <img src="{{url_for('static', path='img/client/shaw-trust.png')}}" alt="Shoes"
+              class="transform hover:scale-90 transition-transform duration-500" />
+          </div>
+          <div class="swiper-slide p-5">
+            <img src="{{url_for('static', path='img/client/sightsavers.svg')}}" alt="Shoes"
+              class="cursor-pointer transform hover:scale-90 transition-transform duration-500" />
+          </div>
+          <div class="swiper-slide p-5">
+            <img src="{{url_for('static', path='img/client/tony_elumelu_foundation.png')}}" alt="Shoes"
+              class="cursor-pointer transform hover:scale-90 transition-transform duration-500" />
+          </div>
+        </div>
+        <!-- <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div> -->
+        <div class="swiper-pagination client-pagination"></div>
+      </div>
+    </section>
+    {% endblock %}
+
+ 
+      
+ 

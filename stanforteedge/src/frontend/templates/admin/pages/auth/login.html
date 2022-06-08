@@ -1,0 +1,28 @@
+{% extends 'admin/base.html' %} {% block title %} login {% endblock %} {% block
+main %}   
+<section class="container mx-auto  px-6 md:px-0 h-screen md:h-[75vh] mt-28">
+   <div class="flex justify-center items-center">
+        <div class="card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100">
+      <div class="card-body">
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Email</span>
+          </label>
+          <input type="text" placeholder="email" class="input input-bordered" />
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Password</span>
+          </label>
+          <input type="text" placeholder="password" class="input input-bordered" />
+          <label class="label">
+            <a href="{{request.url_for('admin_forgot_password')}}" class="label-text-alt link link-hover mt-5">Forgot password? <span class="text-secondary-focus capitalize font-semibold">Reset</span></a>
+          </label>
+        </div>
+        <div class="form-control mt-6">
+          <button class="btn text-base-100 border-0 hover:bg-secondary  bg-secondary-focus">Login</button>
+        </div>
+      </div>
+   </div>
+</section>
+{% endblock %}

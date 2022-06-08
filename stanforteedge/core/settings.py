@@ -12,4 +12,3 @@ template_path = __config(
 static_path = __config(
     "static_dir", cast=str, default=f"{base_dir}/src/frontend/static"
 )
-print(template_path)

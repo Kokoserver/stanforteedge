@@ -68,7 +68,7 @@ var heroSwiper = new Swiper(" .hero-swiper", {
     shadowScale: 0,
   },
   autoplay: {
-    delay: 6000,
+    delay: 5000,
   },
 
   loopFillGroupWithBlank: true,
@@ -79,10 +79,8 @@ var heroSwiper = new Swiper(" .hero-swiper", {
 });
 
 var heroSwiper = new Swiper(".project-swiper", {
-  autoplay: {
-    delay: 10000,
-  },
-  loop: true,
+  autoplay: false,
+  loop: false,
   slidesPerView: 2,
   slidesPerGroup: 3,
 
@@ -96,7 +94,7 @@ var heroSwiper = new Swiper(".project-swiper", {
       spaceBetween: 0,
     },
     640: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 20,
     },
   },
@@ -113,13 +111,11 @@ var heroSwiper = new Swiper(".project-swiper", {
 });
 
 var whatWeDoSwpiper = new Swiper(".wwd-swiper", {
-  autoplay: {
-    delay: 10000,
-  },
+  autoplay: false,
   slidesPerView: 3,
   spaceBetween: 10,
   slidesPerGroup: 3,
-  loop: true,
+  loop: false,
   breakpoints: {
     320: {
       slidesPerView: 1,
@@ -145,3 +141,32 @@ var whatWeDoSwpiper = new Swiper(".wwd-swiper", {
   //   prevEl: ".swiper-button-prev",
   // },
 });
+
+const fadeup = (element) => {
+  element.classList.add("fadeup");
+};
+
+const fadedown = (element) => {
+  element.classList.remove("fadeup");
+};
+
+const fadeleft = (element) => {
+  element.classList.add("fadeleft");
+};
+
+const faderight = (element) => {
+  element.classList.add("faderight");
+};
+
+const toggleNav = (element) => {
+  element.checked = !element.checked;
+};
+
+const toggleSideNav = (parentClass) => {
+  const sideNav = document.querySelector(parentClass);
+  if (sideNav.classList.contains("md:drawer-mobile")) {
+    sideNav.classList.remove("md:drawer-mobile");
+  } else {
+    sideNav.classList.add("md:drawer-mobile");
+  }
+};

@@ -2,18 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-#hero {
-  /* background-image: linear-gradient(
-      51deg,
-      rgba(3, 59, 137),
-      rgba(26, 20, 20, 0.508)
-    ),
-    url(../img/visit_to_odumakin.jpeg); */
-  object-fit: cover;
-  height: 100vh;
-  background-size: cover;
-  background-position: left center;
+@layer components {
+  wrapper {
+    @apply container mx-auto p-6;
+  }
 }
+
+@layer utilities {
+  @keyframes fadeup {
+    from {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadedown {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(50%);
+    }
+  }
+  @keyframes fadeleft {
+    from {
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes faderight {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-20%);
+    }
+  }
+
+  .fadeup {
+    animation: fadeup 1s;
+  }
+  .fadedown {
+    animation: fadedown 1s;
+  }
+  .fadeleft {
+    animation: fadeleft 1s;
+  }
+  .faderight {
+    animation: faderight 1s;
+  }
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+/* #hero {
+  background-image: linear-gradient(
+      to left bottom,
+      rgba(0, 0, 0, 0.664),
+      rgb(8, 8, 8)
+    ),
+    url(../img/icons/bg.jpg);
+  object-fit: cover;
+  height: auto;
+  background-size: cover;
+  background-position: center left;
+} */
 
 .hero-shape {
   position: absolute;
@@ -28,7 +100,8 @@
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 30px;
+  /* z-index: -1; */
+  height: 40px;
 }
 
 .hero-shape .shape-fill {
@@ -114,15 +187,3 @@
   -webkit-align-items: center;
   align-items: center;
 }
-
-/* svg {
-  @apply text-red-300;
-  height: 20px;
-  width: 10px;
-} */
-/* .swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */

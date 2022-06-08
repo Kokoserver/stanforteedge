@@ -2,7 +2,6 @@ from typing import Mapping, Optional
 from starlette.requests import Request
 from starlette.templating import Jinja2Templates
 from starlette.background import BackgroundTask
-from starlette.responses import HTMLResponse
 from starlette import status
 from stanforteedge.core import settings
 

@@ -1,221 +1,44 @@
-<nav id="navbar" class=" w-full ">
- <div class="container mx-auto p-6 text-gray-100">
-    <div class="flex flex-row justify-between items-center">
-    <div class="pt-2">
-      <img
-        width="168"
-        height="34"
-        src="{{url_for('static', path='img/logo.png')}}"
-        alt="logo image"
-      />
-    </div>
-    <div class=" hidden md:flex flex-col md:flex-row space-x-6 capitalize">
-      <a href="#" class="hover:text-gray-300 ">home</a>
-      <!-- This example requires Tailwind CSS v2.0+ -->
-     
-      <div class="relative inline-block text-left">
-        <div>
-          <a
-            class="inline-flex justify-center  w-full rounded-md  bg-white text-sm text-gray-700 hover:text-gray-300"
-            id="menu-button"
-            aria-expanded="true"
-            aria-haspopup="true"
-          >
-            about us
-            <!-- Heroicon name: solid/chevron-down -->
-            <svg
-              class="-mr-1 ml-2 h-5 w-5"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          <a/>
-
-        </div>
-
-
-
-
-
-
-
-
-        <!--
-    Dropdown menu, show/hide based on menu state.
-
-    Entering: "transition ease-out duration-100"
-      From: "transform opacity-0 scale-95"
-      To: "transform opacity-100 scale-100"
-    Leaving: "transition ease-in duration-75"
-      From: "transform opacity-100 scale-100"
-      To: "transform opacity-0 scale-95"
-  -->
-        <div
-          class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="menu-button"
-          tabindex="-1"
-        >
-          <div class="py-1" role="none">
-            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-            <a
-              href="#"
-              class="text-gray-700 block px-4 py-2 text-sm  hover:text-gray-300"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-0"
-              >Our corporate profile</a
-            >
-            <a
-              href="#"
-              class="text-gray-700 block px-4 py-2 text-sm   hover:text-gray-300"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-1"
-              >management team</a
-            >
-            <a
-              href="#"
-              class="text-gray-700 block px-4  py-2 text-sm hover:text-gray-300"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-2"
-              >board or directors</a
-            >
-          </div>
-        </div>
+<div class="w-full md:mb-12 z-10">
+  <div
+    class="navbar bg-base-100 fixed top-0 left-0 text-secondary-focus capitalize shadow-lg"
+  >
+    <div class="container mx-auto px-4 md:px-0">
+      <div class="flex-1 md:container md:mx-auto">
+        <a href="{{request.url_for('homepage')}}">
+          <img
+            src="{{url_for('static', path='img/logo.png')}}"
+            class="w-32"
+            alt=""
+          />
+        </a>
       </div>
- <div class="relative inline-block text-left">
-        <div>
-          <a
-            class="inline-flex justify-center w-full  rounded-md  bg-white text-sm hover:text-gray-300"
-            id="menu-button"
-            aria-expanded="true"
-            aria-haspopup="true"
-          >
-            our projects
-            <!-- Heroicon name: solid/chevron-down -->
-            <svg
-              class="-mr-1 ml-2 h-5 w-5"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          <a/>
-        </div>
-
-        <!--
-    Dropdown menu, show/hide based on menu state.
-
-    Entering: "transition ease-out duration-100"
-      From: "transform opacity-0 scale-95"
-      To: "transform opacity-100 scale-100"
-    Leaving: "transition ease-in duration-75"
-      From: "transform opacity-100 scale-100"
-      To: "transform opacity-0 scale-95"
-  -->
-        <div
-          class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
-          role="menu"
-          aria-orientation="vertical"
-          aria-labelledby="menu-button"
-          tabindex="-1"
-        >
-          <div class="py-1" role="none">
-            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
-            <a
-              href="#"
-              class="text-gray-700  block px-4 py-2 text-sm  hover:text-gray-300"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-0"
-              >Project Enable</a
-            >
-            <a
-              href="#"
-              class="text-gray-700 block px-4  py-2 text-sm hover:text-gray-300"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-1"
-              >Folo</a
-            >
-            <a
-              href="#"
-              class="text-gray-700 block px-4 py-2  text-sm hover:text-gray-300"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-2"
-              >Lafiami</a
-            >
-            <a
-              href="#"
-              class="text-gray-700 block px-4 py-2 text-sm  hover:text-gray-300"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-2"
-              >EduCard</a
-            >
-            <a
-              href="#"
-              class="text-gray-700 block px-4 py-2 text-sm  hover:text-gray-300"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-2"
-              >Check Naija</a
-            >
-            <a
-              href="#"
-              class="text-gray-700 block px-4 py-2  text-sm hover:text-gray-300"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-2"
-              >Check Naija</a
-            >
-            <a
-              href="#"
-              class="text-gray-700 block px-4 py-2  text-sm hover:text-gray-300"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-2"
-              >Student Pad</a
-            >
-            <a
-              href="#"
-              class="text-gray-700 block px-4 py-2 text-sm  hover:text-gray-300"
-              role="menuitem"
-              tabindex="-1"
-              id="menu-item-2"
-              >Access 360</a
-            >
-          </div>
-        </div>
+      <div class="flex-none hidden lg:block">
+        <ul class="menu menu-horizontal items-center space-x-6">
+          {% include 'layouts/navmenu.html' %}
+        </ul>
       </div>
-      <a href="#" class="hover:text-gray-300 ">contact</a>
-      <a href="#" class="hover:text-gray-300 ">projects</a>
-      <a href="#" class="hover:text-gray-300 ">example</a>
-    </div>
-
-    <div class="flex md:hidden">
-     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
-  <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
-</svg>
+      <div class="flex-none lg:hidden">
+        <label
+          for="my-drawer-3"
+          class="btn btn-square btn-ghost"
+          @click="toggleNav($el)"
+          @click.away="toggleNav($el)"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="inline-block w-6 h-6 stroke-current"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </label>
+      </div>
     </div>
   </div>
- </div>
-</nav>
-
+</div>
