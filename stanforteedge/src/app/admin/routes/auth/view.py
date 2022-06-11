@@ -1,18 +1,23 @@
 from starlette.requests import Request
 from stanforteedge.core.shortcut import render
+from  stanforteedge.src.app.admin.routes.auth.form import  RegisterForm, LoginForm
 
-
-def admin_login(request: Request):
+async def admin_login(request: Request):
+    login_form = await LoginForm.from_formdata(request)
     return render(
         request,
         "admin/pages/auth/login.html",
+        context={'login_form': login_form}
+      
     )
 
 
-def admin_register(request: Request):
+async def admin_register(request: Request):
+    register_form = await RegisterForm.from_formdata(request)
     return render(
         request,
         "admin/pages/auth/register.html",
+          context={'register_form': register_form}
     )
 
 

@@ -59,13 +59,16 @@ var clientSwiper = new Swiper(".client-swiper", {
 });
 
 var heroSwiper = new Swiper(" .hero-swiper", {
-  effect: "cube",
+  effect: "coverflow",
   grabCursor: true,
-  cubeEffect: {
-    shadow: false,
-    slideShadows: false,
-    shadowOffset: 0,
-    shadowScale: 0,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 10,
+    modifier: 1,
+    slideShadows: true,
   },
   autoplay: {
     delay: 5000,

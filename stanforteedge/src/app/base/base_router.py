@@ -14,6 +14,53 @@ from stanforteedge.src.app.admin.routes.auth import view as auth_routes
 
 routers = [
     Mount("/static", app=StaticFiles(directory=settings.static_path), name="static"),
+     Mount(
+        path="/project",
+        routes=[
+            Route(
+                path="/project_enable",
+                endpoint=project_routes.project_enable_page,
+                methods=["GET"],
+                name="project_enable_page",
+            ),
+            Route(
+                path="/lafiami",
+                endpoint=project_routes.lafiami_page,
+                methods=["GET"],
+                name="lafiami_page",
+            ),
+            Route(
+                path="/check_naija",
+                endpoint=project_routes.checkNaija_page,
+                methods=["GET"],
+                name="checknaija_page",
+            ),
+             Route(
+                path="/follow_dis_act",
+                endpoint=project_routes.follow_dis_act_page,
+                methods=["GET"],
+                name="follow_dis_act_page",
+            ),
+             Route(
+                path="/access360",
+                endpoint=project_routes.access360_page,
+                methods=["GET"],
+                name="access360_page",
+            ),
+            Route(
+                path="/educard",
+                endpoint=project_routes.educard_page,
+                methods=["GET"],
+                name="educard_page",
+            ),
+            Route(
+                path="/studentpad",
+                endpoint=project_routes.studentpad_page,
+                methods=["GET"],
+                name="studentpad_page",
+            ),
+        ],
+    ),
     Mount(
         path="/about",
         routes=[
@@ -55,13 +102,13 @@ routers = [
             Route(
                 path="/login",
                 endpoint=auth_routes.admin_login,
-                methods=["GET"],
+                methods=["GET", "POST"],
                 name="admin_login",
             ),
             Route(
                 path="/register",
                 endpoint=auth_routes.admin_register,
-                methods=["GET"],
+                methods=["GET", "POST"],
                 name="admin_register",
             ),
             Route(
@@ -82,12 +129,6 @@ routers = [
         path="/",
         routes=[
             Route(
-                path="/projects",
-                endpoint=project_routes.project_page,
-                methods=["GET"],
-                name="projects",
-            ),
-            Route(
                 path="/contact",
                 endpoint=index.conactpage,
                 methods=["GET"],
@@ -107,4 +148,5 @@ routers = [
             ),
         ],
     ),
+   
 ]

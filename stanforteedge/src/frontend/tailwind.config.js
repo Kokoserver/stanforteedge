@@ -34,7 +34,9 @@ module.exports = {
       xl: "1440px",
     },
 
-    extends: {},
+    extends: {
+     
+    },
     // colors: {
     //   gray: {
     //     100: "#FFFFFF",

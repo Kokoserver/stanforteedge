@@ -4,17 +4,32 @@ main %}
    <div class="flex justify-center items-center">
         <div class="card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100">
       <div class="card-body">
+        <form method="post" action="{{request.url_for('admin_login')}}" novalidate="true" class="space-y-5">
+          <div class="form-control">
+            <label class="label">
+              <span class="label-text capitalize">{{login_form.email.label}}</span>
+            </label>
+            {{ login_form.email(placeholder='Email address',
+            autofocus='true',
+            type='email',
+            class='input input-bordered',
+            spellcheck='false') }}
+            {% if login_form.email.errors -%}
+            <span>{{ login_form.email.errors[0] }}</span>
+            {%- endif %}
+          </div>
         <div class="form-control">
           <label class="label">
-            <span class="label-text">Email</span>
+            <span class="label-text">{{login_form.password.label}}</span>
           </label>
-          <input type="text" placeholder="email" class="input input-bordered" />
-        </div>
-        <div class="form-control">
-          <label class="label">
-            <span class="label-text">Password</span>
-          </label>
-          <input type="text" placeholder="password" class="input input-bordered" />
+          {{ login_form.email(placeholder='password',
+            autofocus='true',
+            type='password',
+            class='input input-bordered',
+            spellcheck='false') }}
+            {% if login_form.password.errors -%}
+            <span>{{ login_form.password.errors[0] }}</span>
+            {%- endif %}
           <label class="label">
             <a href="{{request.url_for('admin_forgot_password')}}" class="label-text-alt link link-hover mt-5">Forgot password? <span class="text-secondary-focus capitalize font-semibold">Reset</span></a>
           </label>
