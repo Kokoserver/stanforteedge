@@ -1,28 +1,27 @@
 {% extends 'base.html' %} {% block title %} home {% endblock %} {% block main %}
-<!-- hero section -->
+
 <header class="w-full relative">
-  <div class="md:container-swiper hero-swiper overflow-x-hidden">
+  <div class="md:container-swiper hero-swiper overflow-x-hidden overflow-y-hidden">
     <div class="swiper-wrapper mb-3">
       <div class="swiper-slide">
-        <!-- component -->
-        <div class="w-full">
-          <div class=" flex flex-col-reverse  gap-10 md:flex-row 
-            bg-gradient-to-b from-primary-focus to-primary space-y-32 
+        <div class="w-full mb-10">
+          <div class=" flex flex-col-reverse md:flex-row 
+            bg-gradient-to-b from-primary-focus to-primary space-y-15
             md:space-y-10 pb-32 md:pb-12 h-[100vh]  md:h-[98vh]">
             <div class="flex items-center text-center 
-                  lg:text-left px-2 md:pl-12 md:w-2/5">
-              <div class="md:ml-32">
+                  lg:text-left md:w-2/5 px-6 md:p-0">
+              <div class="md:ml-32 space-y-6">
                 <h2 class="text-3xl font-semibold text-base-100 md:text-3xl capitalize" x-intersect="fadeup($el)">
-                  Driving inclusion through tech <span class="text-base-200">Idea</span></h2>
+                  Driving inclusion through <span class="text-base-200">tech </span></h2>
                 <p class="mt-2 text-sm text-base-300 md:text-base" x-intersect="fadeup($el)">Improving development
                   outcomes for vulnerable populations and marginalized
                   communities leveraging the power of information and communication technologies.</p>
-                <div class="flex justify-center lg:justify-start mt-6">
+                <div class="flex justify-center lg:justify-start">
                   <a href="#wwd"
-                    class="px-4 py-3 bg-secondary-focus  rounded-bl text-base-100 text-xs font-semibold rounded capitalize"
+                    class="px-4 py-3 bg-secondary-focus  rounded-bl-xl text-base-100 text-xs font-semibold rounded capitalize"
                     x-intersect="fadeup($el)">what we do</a>
                   <a href="{{request.url_for('contact')}}" class="mx-4 px-4 py-3  rounded-bl-xl bg-gray-300 
-                    text-gray-900 text-xs font-semibold rounded hover:bg-gray-400 capitalize"
+                    text-gray-900 text-xs font-semibold hover:bg-gray-400 capitalize"
                     x-intersect="fadeup($el)">contact us</a>
                 </div>
               </div>
@@ -31,14 +30,12 @@
             background-img-from-var clip-path-slant-var rounded-bl-xl"
               style=" --bg-img:url({{request.url_for('static', path='img/slide/aspire_enterprenure.jpg')}});
               --clip-path:polygon(25% 0, 100% 0%, 100% 100%, 0 100%); background-position: center;
-              background-size: cover; object-fit: cover; background-repeat: no-repeat;">
-              ">
-              <div class="h-full object-cover bg-no-repeat bg-center" x-intersect="fadeleft($el)">
-                <div class="h-full opacity-25"></div>
-              </div>
+              background-size: cover; object-fit: cover; background-repeat: no-repeat;" x-intersect="scaleup($el)">
+           
+             
             </div>
-            <div class="block md:hidden">
-              <div class="h-full px-10" x-intersect="fadeleft($el)">
+            <div class="block md:hidden ">
+              <div class="h-full px-10 mt-10" x-intersect="fadeleft($el)">
                 <img src="{{url_for('static', path='img/icons/hero-img.svg')}}" alt="">
               </div>
             </div>
@@ -46,7 +43,6 @@
         </div>
       </div>
       <div class="swiper-slide">
-        <!-- component -->
         <div class="w-full ">
           <div class="flex  bg-gradient-img h-[100vh] py-10  md:h-[98vh]"
             style="--bg-img:url({{request.url_for('static', path='img/slide/aspire_entr3.jpg')}})"
@@ -66,7 +62,6 @@
       </div>
 
       <div class="swiper-slide">
-        <!-- component -->
         <div class="w-full ">
           <div class="flex  bg-gradient-img h-[100vh] py-10  md:h-[98vh] bg-center"
             style="--bg-img:url({{request.url_for('static', path='img/slide/youth_program2.jpg')}})"
@@ -105,23 +100,47 @@
 
 <!-- about us -->
 <section class="container mx-auto p-6 mb-14" id="wwd">
-  <h1 class="text-2xl text-secondary-focus capitalize text-center font-semibold" x-intersect="fadeup($el)">
+  <h1 class="text-2xl text-secondary-focus capitalize text-center font-semibold" 
+  x-intersect="fadeup($el)">
     what we do
   </h1>
   <div class="swiper wwd-swiper" x-intersect="fadeup($el)">
     <div class="swiper-wrapper flex items-center justify-between py-10">
-      <div class="swiper-slide">
+     
+      <div class="swiper-slide ">
         <div
           class="flex justify-center items-center text-center flex-col w-full transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
           <div class="pt-10">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" viewBox="0 0 20 20"
-              fill="currentColor">
-              <path fill-rule="evenodd"
-                d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-                clip-rule="evenodd" />
-              <path
-                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+            
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
             </svg>
+            
+          </div>
+          <div class="card-body px-5 py-5 h-56">
+            <h1 class="text-lg font-semibold capitalize">corporate sustainability</h1>
+            <p class="line-clamp-6">
+              we empower PWDs with digital skills and promote assistive
+              technology through our fellowship program and our digital
+              platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div
+          class="flex justify-center items-center text-center flex-col w-full transition-all 
+          duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl 
+          hover:border-l-4 hover:border-l-secondary mx-2">
+          <div class="pt-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" 
+            fill="none" viewBox="0 0 24 24" 
+            stroke="currentColor"
+             stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" 
+              d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+            </svg>
+           
           </div>
           <div class="card-body px-5 py-5 h-56">
             <h1 class="text-lg font-semibold capitalize">disability audit and consultancy</h1>
@@ -132,37 +151,18 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
-        <div
-          class="flex justify-center items-center text-center flex-col w-full transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
-          <div class="pt-10">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" fill="none"
-              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <div class="card-body px-5 py-5 h-56">
-            <h1 class="text-lg font-semibold capitalize">impact Evaluation</h1>
-            <p class="line-clamp-6">
-              we empower PWDs with digital skills and promote assistive
-              technology through our fellowship program and our digital platforms.
-            </p>
-          </div>
-        </div>
-      </div>
       <div class="swiper-slide capitalize">
         <div
           class="flex justify-center items-center text-center flex-col w-full transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
           <div class="pt-10">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" viewBox="0 0 20 20"
-              fill="currentColor">
-              <path fill-rule="evenodd"
-                d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-                clip-rule="evenodd" />
-              <path
-                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
-            </svg>
+            fill="currentColor">
+            <path fill-rule="evenodd"
+              d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+              clip-rule="evenodd" />
+            <path
+              d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+          </svg>
           </div>
           <div class="card-body px-5 py-5 h-56">
             <h1 class="text-lg font-semibold capitalize">organizational development</h1>
@@ -177,14 +177,29 @@
         <div
           class="flex justify-center items-center text-center flex-col w-full transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
           <div class="pt-10">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" viewBox="0 0 20 20"
-              fill="currentColor">
-              <path fill-rule="evenodd"
-                d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-                clip-rule="evenodd" />
-              <path
-                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
             </svg>
+         
+          </div>
+          <div class="card-body px-5 py-5 h-56">
+            <h1 class="text-lg font-semibold capitalize">impact Evaluation</h1>
+            <p class="line-clamp-6">
+              we empower PWDs with digital skills and promote assistive
+              technology through our fellowship program and our digital platforms.
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="swiper-slide">
+        <div
+          class="flex justify-center items-center text-center flex-col w-full transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+          <div class="pt-10">
+            <svg xmlns="http://www.w3.org/2000/svg"  class="h-14 w-14 text-secondary-focus" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+            </svg>
+           
           </div>
           <div class="card-body px-5 py-5 h-56">
             <h1 class="text-lg font-semibold capitalize">corporate philantropy</h1>
@@ -196,29 +211,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide ">
-        <div
-          class="flex justify-center items-center text-center flex-col w-full transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
-          <div class="pt-10">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 text-secondary-focus" viewBox="0 0 20 20"
-              fill="currentColor">
-              <path fill-rule="evenodd"
-                d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
-                clip-rule="evenodd" />
-              <path
-                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
-            </svg>
-          </div>
-          <div class="card-body px-5 py-5 h-56">
-            <h1 class="text-lg font-semibold capitalize">corporate sustainability</h1>
-            <p class="line-clamp-6">
-              we empower PWDs with digital skills and promote assistive
-              technology through our fellowship program and our digital
-              platforms.
-            </p>
-          </div>
-        </div>
-      </div>
+
     </div>
     <div class="swiper-pagination wwd-pagination"></div>
   </div>
@@ -227,7 +220,7 @@
 <!-- our portfolio -->
 <section" class="w-full">
   <h1 class="text-2xl text-secondary-focus capitalize text-center font-semibold" x-intersect="fadeup($el)">
-    Our portfolio
+    Our portfolio Africa
   </h1>
   <div class="container mx-auto overflow-hidden mb-14">
     <div class="swiper project-swiper" x-intersect="fadeup($el)">
@@ -241,9 +234,9 @@
                   alt="project Enable logo" class="lightbox-img cursor-pointer" />
               </figure>
               <div class="card-body px-3 text-center md:text-left">
-                <h1 class="text-lg font-semibold text-secondary-focus capitalize">project Enable</h1>
+                <h1 class="text-lg font-semibold text-secondary-focus capitalize">project Enable Africa</h1>
                 <p class="line-clamp-6">
-                  Project Enable is a community development initiative
+                  Project Enable Africa is a community development initiative
                   that was founded in 2014 to advocate for the rights and empowerment of persons with disabilities in
                   Nigeria. We believe that everyone deserves good quality life and that
                   no one should be discriminated against on the account of their disability.
@@ -252,24 +245,7 @@
             </div>
           </a>
         </div>
-        <div class="swiper-slide md:w-full">
-          <a href="{{request.url_for('follow_dis_act_page')}}">
-            <div class="card  md:h-64 md:card-side transition-all duration-500 shadow-xl 
-          hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
-              <figure class="px-3">
-                <img class="w-40" src="{{url_for('static', path='img/project/logo/Follow-Dis-Act-Original.png')}}"
-                  alt="Follow this act logo" class="lightbox-img cursor-pointer" />
-              </figure>
-              <div class="card-body px-3 text-center md:text-left">
-                <h1 class="text-lg font-semibold text-secondary-focus capitalize">FollowDisACT</h1>
-                <p class="line-clamp-6">
-                  The FollowDisACT Campaign coined from the words ‘Follow Disabilities Act’ is a 5 year campaign project
-                  to coordinate a national conversation on the Nigerian Disabilities Act of 2019.
-                </p>
-              </div>
-            </div>
-          </a>
-        </div>
+      
         <div class="swiper-slide md:w-full">
           <a href="{{request.url_for('studentpad_page')}}">
             <div
@@ -290,6 +266,49 @@
           </a>
         </div>
         <div class="swiper-slide md:w-full">
+          <a href="{{request.url_for('lafiami_page')}}">
+            <div
+              class="card md:h-64 md:card-side transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+              <figure class="px-3">
+                <img class="w-40" src="{{url_for('static', path='img/project/logo/lafiami.png')}}"
+                  alt="Student Pad logo" class="lightbox-img cursor-pointer" />
+              </figure>
+              <div class="card-body px-3 text-center md:text-left">
+                <h1 class="text-lg font-semibold text-secondary-focus capitalize">Lafiami</h1>
+                <p class="line-clamp-6">
+                  Lafiami is a user-friendly digital platform that aggregates 
+                    regular and special health insurance products in Nigeria so that you can easily find, compare and buy suitable, affordable and accessible insurance products based on your personal data including income, location, age and health history. We make access to health insurance easier for you so that you 
+                    can enjoy quality and reliable healthcare all year round.
+
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!-- <div class="swiper-slide md:w-full">
+          <a href="request.url_for('access360_page')">
+            <div
+              class="card md:h-64 md:card-side transition-all 
+              duration-500 shadow-xl hover:shadow-md border-4 
+              border-transparent rounded-bl-3xl hover:border-l-4 
+              hover:border-l-secondary mx-2">
+              <figure class="px-3">
+                <img class="w-40" src="{{url_for('static', path='img/project/logo/access360.jpg')}}"
+                  alt="access360 logo" class="lightbox-img cursor-pointer" />
+              </figure>
+              <div class="card-body px-3 text-center md:text-left">
+                <h1 class="text-lg font-semibold text-secondary-focus capitalize">Access360</h1>
+                <p class="line-clamp-6">
+                  Lorem ipsum dolor sit amet consectetur, 
+                  adipisicing elit. Deserunt non voluptatem dolores dolorem molestiae. Expedita, sunt aliquam hic officia dolores officiis ullam in magnam nisi error aliquid velit, sit laborum. Ea odit, c
+                    onsequuntur quam laborum est praesentium delectus sapiente non!
+
+                </p>
+              </div>
+            </div>
+          </a>
+        </div> -->
+        <div class="swiper-slide md:w-full">
           <a href="{{request.url_for('checknaija_page')}}">
             <div
               class="card md:h-64 md:card-side transition-all duration-500 shadow-xl hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
@@ -302,6 +321,24 @@
                 <p class="line-clamp-6">
                   Check Naija is a broad spectrum fact-checking website with
                   verifying social media hoaxes and scams circulating in Nigeria.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="swiper-slide md:w-full">
+          <a href="{{request.url_for('follow_dis_act_page')}}">
+            <div class="card  md:h-64 md:card-side transition-all duration-500 shadow-xl 
+          hover:shadow-md border-4 border-transparent rounded-bl-3xl hover:border-l-4 hover:border-l-secondary mx-2">
+              <figure class="px-3">
+                <img class="w-40" src="{{url_for('static', path='img/project/logo/Follow-Dis-Act-Original.png')}}"
+                  alt="Follow this act logo" class="lightbox-img cursor-pointer" />
+              </figure>
+              <div class="card-body px-3 text-center md:text-left">
+                <h1 class="text-lg font-semibold text-secondary-focus capitalize">FollowDisACT</h1>
+                <p class="line-clamp-6">
+                  The FollowDisACT Campaign coined from the words "Follow Disabilities Act" is a 5 year campaign project
+                  to coordinate a national conversation on the Nigerian Disabilities Act of 2019.
                 </p>
               </div>
             </div>
@@ -321,9 +358,10 @@
       <div class="card w-full text-center md:px-10 py-12 bg-primary-focus rounded-bl-xl shadow-none"
         x-intersect="fadeup($el)">
         <div class="card-body flex flex-col items-center space-y-2">
-          <h1 class="font-semibold text-3xl capitalize">Contact us today</h1>
-          <p class="">We are using cookies for no reason.</p>
+          <h1 class="font-semibold text-3xl capitalize" x-intersect="fadeup($el)">Contact us today</h1>
+          <p class="">Will you like to be in tourch?</p>
           <a href="{{request.url_for('contact')}}"
+          x-intersect="fadeup($el)"
             class="transition-all duration-500 rounded-bl-xl px-5 py-3 bg-secondary-focus text-base-100 shadow-xl hover:shadow-md w-40 hover:text-base-200 capitalize">Contact
             us</a>
         </div>
@@ -339,15 +377,21 @@
       <div class="swiper client-swiper" x-intersect="fadeup($el)">
         <div class="swiper-wrapper flex items-center justify-between">
           <div class="swiper-slide p-5">
-            <img src="{{url_for('static', path='img/client/us_consulate.png')}}" alt="Shoes"
+            <img src="{{url_for('static', path='img/client/us_consulate.png')}}" 
+               alt="usa consulate logo"
               class="transform hover:scale-90 transition-transform duration-500" />
           </div>
           <div class="swiper-slide p-5">
-            <img src="{{url_for('static', path='img/client/google.png')}}" alt="Shoes"
+            <img src="{{url_for('static', path='img/client/google.png')}}" 
+              alt="google logo"
               class="transform hover:scale-90 transition-transform duration-500" />
           </div>
           <div class="swiper-slide p-5">
-            <img src="{{url_for('static', path='img/client/AEP.png')}}" alt="Shoes"
+            <img src="{{url_for('static', path='img/client/access.png')}}" alt="access bank"
+              class="transform hover:scale-90 transition-transform duration-500" />
+          </div>
+          <div class="swiper-slide p-5">
+            <img src="{{url_for('static', path='img/client/sustainable-hospitality-alliance.png')}}" alt="Shoes"
               class="transform hover:scale-90 transition-transform duration-500" />
           </div>
           <div class="swiper-slide p-5">
@@ -355,29 +399,16 @@
               class="transform hover:scale-90 transition-transform duration-500" />
           </div>
           <div class="swiper-slide p-5">
-            <img src="{{url_for('static', path='img/client/future_makers.png')}}" alt="Shoes"
-              class="transform hover:scale-90 transition-transform duration-500" />
-          </div>
-          <div class="swiper-slide p-5">
-            <img src="{{url_for('static', path='img/client/access.png')}}" alt="Shoes"
-              class="transform hover:scale-90 transition-transform duration-500" />
-          </div>
-          <div class="swiper-slide p-5">
-            <img src="{{url_for('static', path='img/client/project_enable.png')}}" alt="Shoes"
-              class="transform hover:scale-90 transition-transform duration-500" />
-          </div>
-          <div class="swiper-slide p-5">
             <img src="{{url_for('static', path='img/client/sAtandard_chartered.png')}}" alt="Shoes"
               class="transform hover:scale-90 transition-transform duration-500" />
           </div>
+         
+         
           <div class="swiper-slide p-5">
             <img src="{{url_for('static', path='img/client/hacey.png')}}" alt="Shoes"
               class="transform hover:scale-90 transition-transform duration-500" />
           </div>
-          <div class="swiper-slide p-5">
-            <img src="{{url_for('static', path='img/client/sustainable-hospitality-alliance.png')}}" alt="Shoes"
-              class="transform hover:scale-90 transition-transform duration-500" />
-          </div>
+          
           <div class="swiper-slide p-5">
             <img src="{{url_for('static', path='img/client/ids.png')}}" alt="Shoes"
               class="transform hover:scale-90 transition-transform duration-500" />

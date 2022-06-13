@@ -20,6 +20,7 @@ Starlette-WTF = "^0.4.3"
 aiosqlite = "^0.17.0"
 asyncpg = "^0.25.0"
 email-validator = "^1.2.1"
+yagmail = {extras = ["all"], version = "^0.15.277"}
 
 
 [tool.poetry.dev-dependencies]

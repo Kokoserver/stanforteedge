@@ -14,7 +14,12 @@ static_path = __config(
 )
 
 secret_key = __config("SECRET_KEY", cast=str, default="***REPLACEME***")
-crsf_key = __config("CSRF_KEY", cast=str, default="***REPLACEME***")
+crsf_key = __config("CRSf_KEY", cast=str, default="***REPLACEME***")
+
+email_host = __config("EMAIL_HOST", cast=str, default="smtp.gmail.com")
+email_port = __config("EMAIL_PORT", cast=int, default=587)
+email_username = __config("EMAIL_HOST_USER", cast=str, default="owonikokoolaoluwa@gmail.com")
+email_password = __config("EMAIL_HOST_PASSWORD", cast=str, default="08089223577Ola*")
 
 db_username = __config('DB_NAME', cast=str, default='')
 db_password = __config('DB_PASSWORD', cast=str, default='')

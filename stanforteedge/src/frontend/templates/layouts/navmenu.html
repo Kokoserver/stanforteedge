@@ -1,4 +1,4 @@
-<!-- Navbar menu content here -->
+
 
 <a class="hover:bg-transparent hover:text-secondary" href="{{request.url_for('homepage')}}">home</a>
 <div class=" relative inline-block text-left" x-data="{isOpen:false}">
@@ -8,7 +8,7 @@
          @click.away="isOpen = false"
         >
             about us
-            <!-- Heroicon name: solid/chevron-down -->
+      
             <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                 aria-hidden="true">
                 <path fill-rule="evenodd"
@@ -18,21 +18,17 @@
             <a/>
 
     </div>
-    <!--
-    Dropdown menu, show/hide based on menu state.-->
     <div class=" hidden  absolute right-0 mt-2 md:ml-0 w-52 md:w-56  shadow-lg bg-base-100  text-neutral " role="menu" x-bind:class="{'hidden': !isOpen}"
         aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" aria-expanded="">
         <div class="py-1"  role="none">
-            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+        
             <a  href="{{request.url_for('management_team')}}"
                 class="block px-4 py-2 text-sm   hover:text-neutral-focus hover:bg-base-300 transition duration-300"
                 role="menuitem" tabindex="-1" >Our corporate profile</a>
                 <a  href="{{request.url_for('management_team')}}"
                 class="block px-4 py-2 text-sm   hover:text-neutral-focus hover:bg-base-300 transition duration-300"
                 role="menuitem" tabindex="-1" >management team</a>
-            <a href="{{request.url_for('board_or_director')}}"
-                class="block px-4  py-2 text-sm hover:text-neutral-focus hover:bg-base-300 transition duration-300"
-                role="menuitem" tabindex="-1" >board or directors</a>
+        
         </div>
     </div>
 </div>
@@ -43,8 +39,7 @@
             
             @click="isOpen=!isOpen"
             >
-            our projects
-            <!-- Heroicon name: solid/chevron-down -->
+            our portfolio
             <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
                 aria-hidden="true">
                 <path fill-rule="evenodd"
@@ -54,14 +49,11 @@
             <a />
     </div>
 
-    <!--
-    Dropdown menu, show/hide based on menu state.
-  -->
     <div class="hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-base-100  text-neutral " role="menu"
         aria-orientation="vertical" 
         aria-labelledby="menu-button" tabindex="-1" x-bind:class="{hidden:!isOpen}">
         <div class="py-1" role="none">
-            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+          
             <a href="{{request.url_for('project_enable_page')}}"
                 class=" block px-4 py-2 text-sm  hover:text-neutral-focus hover:bg-base-300 transition duration-300"
                 role="menuitem" tabindex="-1" >Project Enable</a>
@@ -71,9 +63,9 @@
             <a href="{{request.url_for('lafiami_page')}}"
                 class="block px-4 py-2  text-sm hover:text-neutral-focus hover:bg-base-300 transition duration-300"
                 role="menuitem" tabindex="-1" >Lafiami</a>
-            <a href="{{request.url_for('educard_page')}}"
+            {#<a href="request.url_for('educard_page')"
                 class="block px-4 py-2 text-sm  hover:text-neutral-focus hover:bg-base-300 transition duration-300"
-                role="menuitem" tabindex="-1" >EduCard</a>
+                role="menuitem" tabindex="-1" >EduCard</a> #}
             
             <a href="{{request.url_for('checknaija_page')}}"
                 class="block px-4 py-2  text-sm hover:text-neutral-focus hover:bg-base-300 transition duration-300"
@@ -81,9 +73,9 @@
             <a href="{{request.url_for('studentpad_page')}}"
                 class="block px-4 py-2  text-sm hover:text-neutral-focus hover:bg-base-300 transition duration-300"
                 role="menuitem" tabindex="-1" >Student Pad</a>
-            <a href="{{request.url_for('access360_page')}}"
+            {#<a href="request.url_for('access360_page')"
                 class="block px-4 py-2 text-sm  hover:text-neutral-focus hover:bg-base-300 transition duration-300"
-                role="menuitem" tabindex="-1" >Access 360</a>
+                role="menuitem" tabindex="-1" >Access 360</a>#}
         </div>
     </div>
 </div>

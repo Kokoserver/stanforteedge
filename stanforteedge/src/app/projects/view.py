@@ -35,7 +35,7 @@ def educard_page(request: Request):
 def studentpad_page(request: Request):
     return render(
         request,
-        "pages/projects/educard.html",
+        "pages/projects/student_pad.html",
     )
 
 def follow_dis_act_page(request: Request):

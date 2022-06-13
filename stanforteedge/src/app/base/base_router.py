@@ -7,6 +7,7 @@ from stanforteedge.src.app import index
 from stanforteedge.src.app.gallery.view import gallery_page
 from stanforteedge.src.app.team import view as team_routes
 from stanforteedge.src.app.projects import view as project_routes
+from stanforteedge.src.app.contact import view as contact_routes
 
 # admin routes
 from stanforteedge.src.app.admin.routes import index as admin_index
@@ -17,6 +18,12 @@ routers = [
      Mount(
         path="/project",
         routes=[
+            Route(
+                path="/",
+                endpoint=index.homepage,
+                methods=["GET"],
+                name="homepage",
+            ),
             Route(
                 path="/project_enable",
                 endpoint=project_routes.project_enable_page,
@@ -41,18 +48,18 @@ routers = [
                 methods=["GET"],
                 name="follow_dis_act_page",
             ),
-             Route(
-                path="/access360",
-                endpoint=project_routes.access360_page,
-                methods=["GET"],
-                name="access360_page",
-            ),
-            Route(
-                path="/educard",
-                endpoint=project_routes.educard_page,
-                methods=["GET"],
-                name="educard_page",
-            ),
+            #  Route(
+            #     path="/access360",
+            #     endpoint=project_routes.access360_page,
+            #     methods=["GET"],
+            #     name="access360_page",
+            # ),
+            # Route(
+            #     path="/educard",
+            #     endpoint=project_routes.educard_page,
+            #     methods=["GET"],
+            #     name="educard_page",
+            # ),
             Route(
                 path="/studentpad",
                 endpoint=project_routes.studentpad_page,
@@ -76,12 +83,12 @@ routers = [
                 methods=["GET"],
                 name="management_team",
             ),
-            Route(
-                path="/board-or-director",
-                endpoint=team_routes.board_or_director,
-                methods=["GET"],
-                name="board_or_director",
-            ),
+            # Route(
+            #     path="/board-or-director",
+            #     endpoint=team_routes.board_or_director,
+            #     methods=["GET"],
+            #     name="board_or_director",
+            # ),
         ],
     ),
     Route(
@@ -130,8 +137,8 @@ routers = [
         routes=[
             Route(
                 path="/contact",
-                endpoint=index.conactpage,
-                methods=["GET"],
+                endpoint=contact_routes.conactpage,
+                methods=["GET", "POST"],
                 name="contact",
             ),
             Route(

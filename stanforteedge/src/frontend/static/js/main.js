@@ -1,11 +1,12 @@
 const lightbox = document.createElement("div");
 lightbox.id = "lightbox";
+lightbox.classList.remove("show_img");
 document.body.appendChild(lightbox);
 
 const images = document.querySelectorAll(".lightbox-img");
 images.forEach((image) => {
   image.addEventListener("click", (e) => {
-    lightbox.classList.add("active");
+    lightbox.classList.add("show_img");
     const img = document.createElement("img");
     img.src = image.src;
     while (lightbox.firstChild) {
@@ -17,7 +18,7 @@ images.forEach((image) => {
 
 lightbox.addEventListener("click", (e) => {
   if (e.target !== e.currentTarget) return;
-  lightbox.classList.remove("active");
+  lightbox.classList.remove("show_img");
 });
 
 var clientSwiper = new Swiper(".client-swiper", {
@@ -160,6 +161,10 @@ const fadeleft = (element) => {
 const faderight = (element) => {
   element.classList.add("faderight");
 };
+
+const scaleup = (element)=>{
+  element.classList.add("scaleup");
+}
 
 const toggleNav = (element) => {
   element.checked = !element.checked;

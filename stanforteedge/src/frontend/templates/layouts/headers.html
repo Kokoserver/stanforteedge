@@ -1,7 +1,5 @@
   <div class=" hidden md:flex flex-col md:flex-row space-x-6 capitalize" x-data="{ open: false }">
-      <a href="#" class="hover:text-gray-300 ">home</a>
-      <!-- This example requires Tailwind CSS v2.0+ -->
-     
+      <a href="#" class="hover:text-gray-300 ">home</a>     
       <div class="relative inline-block text-left" @click="show=true">
         <div>
           <a
@@ -12,7 +10,6 @@
             @click="show=true"
           >
             about us
-            <!-- Heroicon name: solid/chevron-down -->
             <svg
               class="-mr-1 ml-2 h-5 w-5"
               xmlns="http://www.w3.org/2000/svg"
@@ -35,18 +32,6 @@
 
 
 
-
-
-        <!--
-    Dropdown menu, show/hide based on menu state.
-
-    Entering: "transition ease-out duration-100"
-      From: "transform opacity-0 scale-95"
-      To: "transform opacity-100 scale-100"
-    Leaving: "transition ease-in duration-75"
-      From: "transform opacity-100 scale-100"
-      To: "transform opacity-0 scale-95"
-  -->
         <div
           class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
           role="menu"
@@ -55,7 +40,6 @@
           tabindex="-1"
         >
           <div class="py-1" role="none">
-            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
             <a
               href="#"
               class="text-gray-700 block px-4 py-2 text-sm  hover:text-gray-300"
@@ -92,7 +76,6 @@
             aria-haspopup="true"
           >
             our projects
-            <!-- Heroicon name: solid/chevron-down -->
             <svg
               class="-mr-1 ml-2 h-5 w-5"
               xmlns="http://www.w3.org/2000/svg"
@@ -108,17 +91,6 @@
             </svg>
           <a/>
         </div>
-
-        <!--
-    Dropdown menu, show/hide based on menu state.
-
-    Entering: "transition ease-out duration-100"
-      From: "transform opacity-0 scale-95"
-      To: "transform opacity-100 scale-100"
-    Leaving: "transition ease-in duration-75"
-      From: "transform opacity-100 scale-100"
-      To: "transform opacity-0 scale-95"
-  -->
         <div
           class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none hidden"
           role="menu"
@@ -127,7 +99,7 @@
           tabindex="-1"
         >
           <div class="py-1" role="none">
-            <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
+         
             <a
               href="#"
               class="text-gray-700  block px-4 py-2 text-sm  hover:text-gray-300"
