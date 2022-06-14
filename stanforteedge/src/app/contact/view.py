@@ -23,7 +23,7 @@ async def conactpage(request: Request):
         if await contact_form.validate_on_submit():
             body = f""""
             New contact form submission :
-            Name: {contact_form.name.data}
+            Name: {contact_form.full_name.data}
             Email: {contact_form.email.data}
             Message: {contact_form.message.data}
             """
