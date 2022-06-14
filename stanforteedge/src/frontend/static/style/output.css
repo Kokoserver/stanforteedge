@@ -2102,7 +2102,7 @@ body[dir="rtl"] .checkbox:checked,
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 65px;
+  height: 50px;
 }
 
 .hero-shape .shape-fill {
@@ -2281,18 +2281,6 @@ body[dir="rtl"] .checkbox:checked,
   margin-right: 0.5rem;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .mb-14 {
   margin-bottom: 3.5rem;
 }
@@ -2307,6 +2295,10 @@ body[dir="rtl"] .checkbox:checked,
 
 .mb-16 {
   margin-bottom: 4rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mt-3 {
@@ -2413,16 +2405,12 @@ body[dir="rtl"] .checkbox:checked,
   width: 14rem;
 }
 
-.w-16 {
-  width: 4rem;
+.w-24 {
+  width: 6rem;
 }
 
 .w-6 {
   width: 1.5rem;
-}
-
-.w-52 {
-  width: 13rem;
 }
 
 .w-80 {
@@ -2451,18 +2439,6 @@ body[dir="rtl"] .checkbox:checked,
 
 .w-64 {
   width: 16rem;
-}
-
-.w-20 {
-  width: 5rem;
-}
-
-.w-24 {
-  width: 6rem;
-}
-
-.w-44 {
-  width: 11rem;
 }
 
 .max-w-full {
@@ -2563,6 +2539,12 @@ body[dir="rtl"] .checkbox:checked,
   margin-left: calc(1.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
 .space-y-5 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -2597,12 +2579,6 @@ body[dir="rtl"] .checkbox:checked,
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
-}
-
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -2869,16 +2845,12 @@ body[dir="rtl"] .checkbox:checked,
   padding-bottom: 0.5rem;
 }
 
-.pb-32 {
-  padding-bottom: 8rem;
+.pb-16 {
+  padding-bottom: 4rem;
 }
 
 .pt-10 {
   padding-top: 2.5rem;
-}
-
-.pl-4 {
-  padding-left: 1rem;
 }
 
 .text-left {
@@ -3518,10 +3490,6 @@ body[dir="rtl"] .checkbox:checked,
 
   .md\:ml-32 {
     margin-left: 8rem;
-  }
-
-  .md\:mb-0 {
-    margin-bottom: 0px;
   }
 
   .md\:block {
