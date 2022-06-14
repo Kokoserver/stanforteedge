@@ -2285,6 +2285,14 @@ body[dir="rtl"] .checkbox:checked,
   margin-bottom: 0.75rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mb-14 {
   margin-bottom: 3.5rem;
 }
@@ -2299,10 +2307,6 @@ body[dir="rtl"] .checkbox:checked,
 
 .mb-16 {
   margin-bottom: 4rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
 }
 
 .mt-3 {
@@ -2409,8 +2413,8 @@ body[dir="rtl"] .checkbox:checked,
   width: 14rem;
 }
 
-.w-32 {
-  width: 8rem;
+.w-16 {
+  width: 4rem;
 }
 
 .w-6 {
@@ -2441,8 +2445,20 @@ body[dir="rtl"] .checkbox:checked,
   width: 10rem;
 }
 
+.w-32 {
+  width: 8rem;
+}
+
 .w-64 {
   width: 16rem;
+}
+
+.w-20 {
+  width: 5rem;
+}
+
+.w-24 {
+  width: 6rem;
 }
 
 .max-w-full {
@@ -2489,6 +2505,10 @@ body[dir="rtl"] .checkbox:checked,
   grid-auto-flow: column;
 }
 
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -2519,10 +2539,6 @@ body[dir="rtl"] .checkbox:checked,
 
 .justify-between {
   justify-content: space-between;
-}
-
-.gap-10 {
-  gap: 2.5rem;
 }
 
 .gap-4 {
@@ -2567,10 +2583,10 @@ body[dir="rtl"] .checkbox:checked,
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-32 > :not([hidden]) ~ :not([hidden]) {
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(8rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(8rem * var(--tw-space-y-reverse));
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2583,12 +2599,6 @@ body[dir="rtl"] .checkbox:checked,
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-
-.space-y-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden {
@@ -2740,10 +2750,6 @@ body[dir="rtl"] .checkbox:checked,
      object-position: center;
 }
 
-.p-6 {
-  padding: 1.5rem;
-}
-
 .p-10 {
   padding: 2.5rem;
 }
@@ -2754,6 +2760,10 @@ body[dir="rtl"] .checkbox:checked,
 
 .p-1 {
   padding: 0.25rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .p-5 {
@@ -2861,6 +2871,10 @@ body[dir="rtl"] .checkbox:checked,
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .text-left {
@@ -2974,6 +2988,11 @@ body[dir="rtl"] .checkbox:checked,
   color: hsl(var(--nf, var(--n)) / var(--tw-text-opacity));
 }
 
+.text-base-200 {
+  --tw-text-opacity: 1;
+  color: hsl(var(--b2, var(--b1)) / var(--tw-text-opacity));
+}
+
 .text-base-300 {
   --tw-text-opacity: 1;
   color: hsl(var(--b3, var(--b2)) / var(--tw-text-opacity));
@@ -3074,6 +3093,45 @@ body[dir="rtl"] .checkbox:checked,
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 6;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .wrapper {
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 976px) {
+  .wrapper {
+    max-width: 976px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .wrapper {
+    max-width: 1440px;
+  }
+}
+
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 1.5rem;
+  }
 }
 
 .background-img-from-var {
@@ -3458,6 +3516,10 @@ body[dir="rtl"] .checkbox:checked,
     margin-left: 8rem;
   }
 
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3490,6 +3552,10 @@ body[dir="rtl"] .checkbox:checked,
     height: 100vh;
   }
 
+  .md\:w-40 {
+    width: 10rem;
+  }
+
   .md\:w-56 {
     width: 14rem;
   }
@@ -3512,10 +3578,6 @@ body[dir="rtl"] .checkbox:checked,
 
   .md\:w-full {
     width: 100%;
-  }
-
-  .md\:w-40 {
-    width: 10rem;
   }
 
   .md\:w-48 {
@@ -3570,6 +3632,10 @@ body[dir="rtl"] .checkbox:checked,
 
   .md\:p-2 {
     padding: 0.5rem;
+  }
+
+  .md\:p-0 {
+    padding: 0px;
   }
 
   .md\:px-0 {
