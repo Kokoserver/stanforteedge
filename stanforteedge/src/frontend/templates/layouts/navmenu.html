@@ -22,7 +22,7 @@
     
      role="menu" x-bind:class="{'hidden': !isOpen}"
         aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" aria-expanded="">
-        <div class="py-1"  role="none">
+        <div class="space-y-4"  role="none">
         
             <a  href="{{request.url_for('corporation_profile')}}"
                  @click="window.location.href = '{{request.url_for('corporation_profile')}}'"
