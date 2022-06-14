@@ -35,12 +35,12 @@ var clientSwiper = new Swiper(".client-swiper", {
     // when window width is >= 320px
     320: {
       slidesPerView: 2,
-      spaceBetween: 10,
+      spaceBetween: 5,
     },
     // when window width is >= 480px
     480: {
       slidesPerView: 3,
-      spaceBetween: 10,
+      spaceBetween: 5,
     },
     // when window width is >= 640px
     640: {
@@ -83,10 +83,11 @@ var heroSwiper = new Swiper(" .hero-swiper", {
 });
 
 var heroSwiper = new Swiper(".project-swiper", {
-  autoplay: false,
-  loop: false,
+  autoplay: {
+    delay: 5000,
+  },
   slidesPerView: 2,
-  slidesPerGroup: 3,
+  slidesPerGroup: 1,
 
   breakpoints: {
     320: {
