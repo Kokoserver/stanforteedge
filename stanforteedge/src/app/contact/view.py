@@ -21,7 +21,7 @@ async def conactpage(request: Request):
     contact_form = await ContactForm.from_formdata(request)
     if request.method == "POST":
         if await contact_form.validate_on_submit():
-            body = f""""
+            body = f"""
             New contact form submission :
             Name: {contact_form.full_name.data}
             Email: {contact_form.email.data}
@@ -34,7 +34,7 @@ async def conactpage(request: Request):
             )
             flash_message.flash(
                 request,
-                "Thanks for contacting us, we will get in tourch soon",
+                "Thanks for contacting us, we will get in touch soon",
             )
             return reirect(
                 "/", status_code=status.HTTP_301_MOVED_PERMANENTLY, background=sender
