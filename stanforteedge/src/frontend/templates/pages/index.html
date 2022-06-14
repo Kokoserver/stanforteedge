@@ -2,12 +2,12 @@
 
 <header class="w-full relative">
   <div class="md:container-swiper hero-swiper overflow-x-hidden overflow-y-hidden">
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper mb-6">
       <div class="swiper-slide">
         <div class="w-full ">
-          <div class=" flex flex-col-reverse items-start md:flex-row 
+          <div class=" flex flex-col-reverse md:flex-row 
           gap-4
-            bg-gradient-to-b from-primary-focus to-primary 
+            bg-gradient-to-b from-primary-focus to-primary space-y-15
             md:space-y-15 pb-16 md:pb-12 h-[100vh]  md:h-[98vh]">
             <div class="flex items-center text-center 
                   lg:text-left md:w-2/5 px-6 md:p-0">
@@ -35,7 +35,7 @@
            
              
             </div>
-            <div class="flex md:hidden ">
+            <div class="block md:hidden ">
               <div class="h-full px-10" x-intersect="fadeleft($el)">
                 <img src="{{url_for('static', path='img/icons/hero-img.svg')}}" class="w-full" alt="">
               </div>
