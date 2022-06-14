@@ -1,0 +1,85 @@
+
+
+<a class="hover:bg-transparent hover:text-secondary" href="{{request.url_for('homepage')}}">home</a>
+<div class=" relative inline-block text-left" x-data="{isOpen:false}">
+    <div class="cursor-pointer ">
+        <a class="inline-flex justify-center items-center hover:text-secondary transition duration-300"
+         @click="isOpen = !isOpen"
+         @click.away="isOpen = false"
+        >
+            about us
+      
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+            </svg>
+            <a/>
+
+    </div>
+    <div class=" hidden  absolute right-0 mt-2 md:ml-0 w-52 md:w-56  shadow-lg bg-base-100  text-neutral " role="menu" x-bind:class="{'hidden': !isOpen}"
+        aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" aria-expanded="">
+        <div class="py-1"  role="none">
+        
+            <a  href="{{request.url_for('management_team')}}"
+                class="block px-4 py-2 text-sm   hover:text-neutral-focus hover:bg-base-300 transition duration-300"
+                role="menuitem" tabindex="-1" >Our corporate profile</a>
+                <a  href="{{request.url_for('management_team')}}"
+                class="block px-4 py-2 text-sm   hover:text-neutral-focus hover:bg-base-300 transition duration-300"
+                role="menuitem" tabindex="-1" >management team</a>
+        
+        </div>
+    </div>
+</div>
+<div class="relative inline-block text-left" x-data="{isOpen:false}" @click.away="isOpen=false">
+    <div class="cursor-pointer">
+        <a class="inline-flex justify-center items-center rounded-md  hover:text-secondary transition duration-300"
+           aria-expanded="true"
+            
+            @click="isOpen=!isOpen"
+            >
+            our portfolio
+            <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                aria-hidden="true">
+                <path fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+            </svg>
+            <a />
+    </div>
+
+    <div class="hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-base-100  text-neutral " role="menu"
+        aria-orientation="vertical" 
+        aria-labelledby="menu-button" tabindex="-1" x-bind:class="{hidden:!isOpen}">
+        <div class="py-1" role="none">
+          
+            <a href="{{request.url_for('project_enable_page')}}"
+                class=" block px-4 py-2 text-sm  hover:text-neutral-focus hover:bg-base-300 transition duration-300"
+                role="menuitem" tabindex="-1" >Project Enable</a>
+            <a href="{{request.url_for('follow_dis_act_page')}}"
+                class="block px-4  py-2 text-sm hover:text-neutral-focus hover:bg-base-300 transition duration-300"
+                role="menuitem" tabindex="-1" >FollowDisAct</a>
+            <a href="{{request.url_for('lafiami_page')}}"
+                class="block px-4 py-2  text-sm hover:text-neutral-focus hover:bg-base-300 transition duration-300"
+                role="menuitem" tabindex="-1" >Lafiami</a>
+            {#<a href="request.url_for('educard_page')"
+                class="block px-4 py-2 text-sm  hover:text-neutral-focus hover:bg-base-300 transition duration-300"
+                role="menuitem" tabindex="-1" >EduCard</a> #}
+            
+            <a href="{{request.url_for('checknaija_page')}}"
+                class="block px-4 py-2  text-sm hover:text-neutral-focus hover:bg-base-300 transition duration-300"
+                role="menuitem" tabindex="-1" >Check Naija</a>
+            <a href="{{request.url_for('studentpad_page')}}"
+                class="block px-4 py-2  text-sm hover:text-neutral-focus hover:bg-base-300 transition duration-300"
+                role="menuitem" tabindex="-1" >Student Pad</a>
+            {#<a href="request.url_for('access360_page')"
+                class="block px-4 py-2 text-sm  hover:text-neutral-focus hover:bg-base-300 transition duration-300"
+                role="menuitem" tabindex="-1" >Access 360</a>#}
+        </div>
+    </div>
+</div>
+<a class="hover:bg-transparent hover:text-secondary" href="{{request.url_for('gallery')}}">gallery</a>
+<a class="hover:bg-transparent hover:text-secondary" href="{{request.url_for('contact')}}">contact us</a>
+
+

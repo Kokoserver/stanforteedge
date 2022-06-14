@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="{{url_for('static', path='img/logo.png')}}"
-      type="image/x-icon"
-    />
-    <link
-      rel="stylesheet"
-      href="{{url_for('static', path='style/output.css')}}"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
-    />
+<html lang="en" data-theme="light" class="scroll-smooth">
 
-    <script
-      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-      defer
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="{{url_for('static', path='img/logo.png')}}" type="image/x-icon" />
+  <link rel="stylesheet" href="{{url_for('static', path='style/output.css')}}" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
 
-    <title>
-      {% block title %} home {% endblock %} | welcome to stanforte edge
-    </title>
-  </head>
-  <body class="text-black-400">
-    {% block navbar %} {% include 'layouts/navbar.html' %} {% endblock %} {%
-    block main %}
-    <h1>No content</h1>
-    {% endblock %} {% block footer %} {% include 'layouts/footer.html' %} {%
-    endblock %}
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="{{url_for('static', path='js/main.js')}}"></script>
-  </body>
+  <title>
+    {% block title %} home {% endblock %} | welcome to stanforte edge
+  </title>
+</head>
+
+<body class="text-gray-900 bg-[#fff]" x-data>
+  
+  <div class="drawer">
+    <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content flex flex-col">
+      {% include 'snippet/alert.html' %} 
+      {% block navbar %} {% include 'layouts/navbar.html' %} {% endblock %}
+    
+      <main >
+        {% block main %} Content {% endblock %} {% block footer %} {% include
+        'layouts/footer.html' %} {% endblock %}
+      </main>
+    </div>
+    {% block sidebar %} {% include 'layouts/sidebar.html' %} {% endblock %}
+  </div>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="{{url_for('static', path='js/main.js')}}"></script>
+</body>
+
 </html>

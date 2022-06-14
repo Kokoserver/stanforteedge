@@ -1,0 +1,73 @@
+{% extends 'admin/base.html' %} {% block title %} login {% endblock %} {% block
+main %}
+<section class="container px-6 md:px-0 mx-auto h-screen md:h-[100vh] my-20">
+  <div class="flex justify-center items-center">
+    <div class="card flex-shrink-0 w-full max-w-md shadow-2xl bg-base-100">
+      <div class="card-body">
+          <form method="post" action="{{request.url_for('admin_register')}}" novalidate="true" class="space-y-5">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text capitalize">{{register_form.email.label}}</span>
+              </label>
+              {{ register_form.email(placeholder='Email address',
+              autofocus='true',
+              type='email',
+              class='input input-bordered',
+              spellcheck='false') }}
+              {% if register_form.email.errors -%}
+              <span>{{ register_form.email.errors[0] }}</span>
+              {%- endif %}
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text capitalize">{{register_form.username.label}}</span>
+              </label>
+              {{ register_form.username(placeholder='username',
+              type='text',
+              class='input input-bordered',
+              spellcheck='false') }}
+              {% if register_form.username.errors -%}
+              <span>{{ register_form.username.errors[0] }}</span>
+              {%- endif %}
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text capitalize">{{register_form.password.label}}</span>
+              </label>
+              {{ register_form.password(placeholder='password',
+              type='password',
+              class='input input-bordered',
+              spellcheck='false') }}
+              {% if register_form.password.errors -%}
+              <span>{{ register_form.password.errors[0] }}</span>
+              {%- endif %}
+            </div>
+
+
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text capitalize">{{register_form.confirm_password.label}}</span>
+              </label>
+              {{ register_form.confirm_password(placeholder='confirm password',
+              type='password',
+              class='input input-bordered') }}
+              {% if register_form.confirm_password.errors -%}
+              <span>{{ register_form.confirm_password.errors[0] }}</span>
+              {%- endif %}
+              <label class="label">
+                <a href="{{request.url_for('admin_login')}}" class="label-text-alt link link-hover mt-5">Already have an
+                  account?
+                  <span class="text-secondary-focus capitalize font-semibold">login</span></a>
+              </label>
+            </div>
+            <div class="form-control mt-6">
+              <button class="btn text-base-100 border-0 hover:bg-secondary bg-secondary-focus">
+                Register
+              </button>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

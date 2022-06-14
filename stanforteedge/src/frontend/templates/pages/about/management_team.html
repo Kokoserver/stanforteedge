@@ -1,0 +1,203 @@
+{% extends 'base.html' %} {% block title %} management team {% endblock %} {%
+block main %}
+<div class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6 md:px-12 xl:px-32">
+    <div class="mb-16 text-center" x-intersect="fadeup($el)">
+      <h2
+        class="mb-4 text-center text-2xl text-secondary-focus font-bold md:text-4xl capitalize"
+      >
+       our management team
+      </h2>
+      
+    </div>
+    <div
+      class="grid gap-12 items-center md:grid-cols-3"
+      x-intersect="fadeup($el)"
+    >
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-40 md:h-40 lg:w-64 lg:h-64 lightbox-img cursor-pointer"
+          src="{{request.url_for('static', path='img/team/dolapo.jpg')}}"
+          alt="dolapo agbede"
+          loading="lazy"
+          width="640"
+          height="805"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Dolapo Agbede</h4>
+          <span class="block text-sm text-gray-500 capitalize">Program Consultant</span>
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-48 md:h-64 lg:w-64 lg:h-80 lightbox-img cursor-pointer"
+          src="{{request.url_for('static', path='img/team/owonikoko.jpg')}}"
+          alt="olusola owonikoko"
+          loading="lazy"
+          width="1000"
+          height="667"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Olusola Owonikoko</h4>
+          <span class="block text-sm text-gray-500 capitalize"
+            >Executive Director</span
+          >
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-40 md:h-40 lg:w-64 lg:h-64 lightbox-img cursor-pointer"
+          src="{{request.url_for('static', path='img/team/lanre_olagunju.jpg')}}"
+          alt="lanre olagunju"
+          loading="lazy"
+          width="1000"
+          height="667"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Lanre Olagunju</h4>
+          <span class="block text-sm text-gray-500 capitalize"
+            >Media Consultant</span
+          >
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-40 md:h-40 lg:w-64 lg:h-64 lightbox-img cursor-pointer"
+          src="{{request.url_for('static', path='img/team/olalekan_owonikoko.jpg')}}"
+          alt="Ademibolanle Ajijala"
+          loading="lazy"
+          width="640"
+          height="805"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Olalekan Owonikoko
+          </h4>
+          <span class="block text-sm text-gray-500 capitalize">IT Lead</span>
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-48 md:h-64 lg:w-64 lg:h-80 lightbox-img cursor-pointer"
+          src="{{request.url_for('static', path='img/team/ademibola.jpeg')}}"
+          alt="Ademibolanle Ajijala"
+          loading="lazy"
+          width="1000"
+          height="667"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Ademibolanle Ajijala</h4>
+          <span class="block text-sm text-gray-500 capitalize">Administrative Lead</span>
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-40 md:h-40 lg:w-64 lg:h-64 lightbox-img cursor-pointer"
+          src="{{request.url_for('static', path='img/team/micheal.jpg')}}"
+          alt="Micheal Ojediran"
+          loading="lazy"
+          width="1000"
+          height="667"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Micheal Ojediran</h4>
+          <span class="block text-sm text-gray-500 capitalize"
+            >Programs Officer</span
+          >
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)"> 
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-40 md:h-40 lg:w-64 lg:h-64 lightbox-img cursor-pointer"
+          src="{{request.url_for('static', path='img/team/Ngozi_ukpai.jpg')}}"
+          alt="Ngozi Ukpai-okoro"
+          loading="lazy"
+          width="640"
+          height="805"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Ngozi Ukpai-okoro</h4>
+          <span class="block text-sm text-gray-500 capitalize">Community Mobilization Officer</span>
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-48 md:h-64 lg:w-64 lg:h-80 lightbox-img cursor-pointer"
+          src="{{request.url_for('static', path='img/team/alen.jpg')}}"
+          alt="Allen Abu Oyaoze"
+          loading="lazy"
+          width="1000"
+          height="667"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Allen Abu Oyaoze</h4>
+          <span class="block text-sm text-gray-500 capitalize"
+            > Communication Lead</span
+          >
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-40 md:h-40 lg:w-64 lg:h-64 lightbox-img cursor-pointer"
+          src="{{request.url_for('static', path='img/team/moyinolauwa.jpeg')}}"
+          alt="woman"
+          loading="lazy"
+          width="1000"
+          height="667"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Moyinoluwatotamilore Adelakun </h4>
+          <span class="block text-sm text-gray-500 capitalize"
+            >Programs Officer</span
+          >
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-40 md:h-40 lg:w-64 lg:h-64 lightbox-img cursor-pointer"
+          src="{{request.url_for('static', path='img/team/oscar.jpg')}}"
+          alt="Oscar Igrubia"
+          loading="lazy"
+          width="640"
+          height="805"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Oscar Igrubia</h4>
+          <span class="block text-sm text-gray-500 capitalize">Communications Officer</span>
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-48 md:h-64 lg:w-64 lg:h-80 lightbox-img cursor-pointer"
+          src="{{request.url_for('static', path='img/team/temi.jpeg')}}"
+          alt="Allen Abu Oyaoze"
+          loading="lazy"
+          width="1000"
+          height="667"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Temiloluwa Olaniyan</h4>
+          <span class="block text-sm text-gray-500 capitalize"
+            >  Content writer</span
+          >
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-40 md:h-40 lg:w-64 lg:h-64 lightbox-img cursor-pointer"
+          src="{{request.url_for('static', path='img/team/funsho.jpeg')}}"
+          alt="Funso Adun"
+          loading="lazy"
+          width="1000"
+          height="667"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Funso Adun</h4>
+          <span class="block text-sm text-gray-500 capitalize"
+            >communication Officer</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock%}

@@ -1,0 +1,103 @@
+{% extends 'base.html' %} {% block title %} board or director {% endblock %} {%
+block main %}
+<div class="py-20 bg-gray-50">
+  <div class="container mx-auto px-6 md:px-12 xl:px-32">
+    <div class="mb-16 text-center" x-intersect="fadeup($el)">
+      <h2
+        class="mb-4 text-center text-2xl text-secondary-focus font-bold md:text-4xl"
+      >
+      Our Board of Directors
+      </h2>
+     
+    </div>
+    <div
+      class="grid gap-12 items-center md:grid-cols-3"
+      x-intersect="fadeup($el)"
+    >
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl md:w-40 md:h-40 lg:w-64 lg:h-64"
+          src="{{request.url_for('static', path='img/board/odumakin.jpg')}}"
+          alt="Dr. Joe Okei-Odumakin"
+          loading="lazy"
+          width="640"
+          height="805"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Dr. Joe Okei-Odumakin</h4>
+          <span class="block text-sm text-gray-500 capitalize">Josephine "Joe" Obiajulu Okei-Odumakin is a Nigerian women's rights activist. She is the president of the rights groups 
+            Women Arise for Change Initiative and the Campaign for Democracy.</span>
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl md:w-48 md:h-64 lg:w-64 lg:h-80"
+          src="{{request.url_for('static', path='img/team/owonikoko.jpg')}}"
+          alt="Olusola Owonikoko"
+          loading="lazy"
+          width="1000"
+          height="667"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Olusola Owonikoko</h4>
+          <span class="block text-sm text-gray-500 capitalize"
+            >Olusola is an international development practitioner & researcher;working at the intersection of business & development. 
+            He is a regular speaker at development, entrepreneurial & youth conferences.</span
+          >
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-40 md:h-40 lg:w-64 lg:h-64"
+          src="{{request.url_for('static', path='img/board/Babs-Portrait-Official.jpg')}}"
+          alt="Prof. Babs Onabanjo"
+          loading="lazy"
+          width="1000"
+          height="667"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Prof. Babs Onabanjo
+
+          </h4>
+          <span class="block text-sm text-gray-500 capitalize"
+            >He is the President at A. D. King Foundation, 
+            Prof & Chair Faculty Senate, Atlanta Metropolitan State College.
+            </span
+          >
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-40 md:h-40 lg:w-64 lg:h-64"
+          src="{{request.url_for('static', path='img/board/adesoji.jpg')}}"
+          alt="Dr. Olusoji Adebisi"
+          loading="lazy"
+          width="640"
+          height="805"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Dr. Olusoji Adebisi</h4>
+          <!-- <span class="block text-sm text-gray-500 capitalize"></span> -->
+        </div>
+      </div>
+      <div class="space-y-4 text-center" x-intersect="fadeup($el)">
+        <img
+          class="w-64 h-64 mx-auto object-cover rounded-bl-xl  md:w-48 md:h-64 lg:w-64 lg:h-80"
+          src="{{request.url_for('static', path='img/board/bankole_allibey.jpeg')}}"
+          
+          alt="Dr. Bankole Allibay"
+          loading="lazy"
+          width="1000"
+          height="667"
+        />
+        <div>
+          <h4 class="text-2xl text-secondary-focus">Dr. Bankole Allibay</h4>
+          <span class="block text-sm text-gray-500 capitalize">Dr. Bankole Allibay is an Environmental Social and Governance (ESG) Consultant with knowledge and 
+            experience in providing a range of end-to-end social sustainability related solutions.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+{% endblock%}

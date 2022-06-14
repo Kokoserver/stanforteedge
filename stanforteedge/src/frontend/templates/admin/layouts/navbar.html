@@ -1,0 +1,55 @@
+<div class="w-full md:mb-12 z-10">
+  <div
+    class="navbar bg-base-100 fixed top-0 left-0 text-secondary-focus capitalize shadow-lg"
+  >
+    <div class="container mx-auto px-4 md:px-0">
+      <div class="flex-1 md:container md:mx-auto">
+        <a href="{{request.url_for('homepage')}}">
+          <img
+            src="{{url_for('static', path='img/logo.png')}}"
+            class="w-32"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="flex-none hidden lg:block">
+        <div class="menu menu-horizontal items-center space-x-6 mr-10">
+          <a
+            href="{{request.url_for('admin_register')}}"
+            class="text-secondary-focus capitalize hover:text-secondary"
+          >
+            register
+          </a>
+
+          <a
+            href="{{request.url_for('admin_login')}}"
+            class="text-secondary-focus capitalize hover:text-secondary"
+          >
+            login
+          </a>
+        </div>
+      </div>
+      <div class="flex">
+        <label
+          for="admin-drawer"
+          class="btn btn-square btn-ghost"
+          @click="toggleSideNav('.drawer')"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="inline-block w-6 h-6 stroke-current"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </label>
+      </div>
+    </div>
+  </div>
+</div>

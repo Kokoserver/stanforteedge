@@ -16,7 +16,6 @@
     "**.pytest_cache": true,
     "**.idea": true
   },
-  "python.formatting.yapfPath": "black",
   "python.linting.enabled": true,
   "python.formatting.provider": "black"
 }

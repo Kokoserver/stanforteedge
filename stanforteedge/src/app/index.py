@@ -7,3 +7,11 @@ def homepage(request: Request):
         request,
         "pages/index.html",
     )
+
+
+def conactpage(request: Request):
+    
+    return render(
+        request,
+        "pages/contact.html",
+    )
