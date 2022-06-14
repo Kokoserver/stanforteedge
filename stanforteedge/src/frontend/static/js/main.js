@@ -117,9 +117,9 @@ var heroSwiper = new Swiper(".project-swiper", {
 
 var whatWeDoSwpiper = new Swiper(".wwd-swiper", {
   autoplay: false,
-  slidesPerView: 3,
+  slidesPerView: 2,
   spaceBetween: 10,
-  slidesPerGroup: 3,
+  slidesPerGroup: 2,
   loop: false,
   breakpoints: {
     320: {
@@ -131,8 +131,8 @@ var whatWeDoSwpiper = new Swiper(".wwd-swiper", {
       spaceBetween: 0,
     },
     640: {
-      slidesPerView: 3,
-      spaceBetween: 20,
+      slidesPerView: 2,
+      spaceBetween: 15,
     },
   },
 
