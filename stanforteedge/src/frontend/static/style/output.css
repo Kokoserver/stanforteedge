@@ -2313,6 +2313,10 @@ body[dir="rtl"] .checkbox:checked,
   margin-top: 1.25rem;
 }
 
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
 .block {
   display: block;
 }
@@ -2507,6 +2511,10 @@ body[dir="rtl"] .checkbox:checked,
 
 .flex-nowrap {
   flex-wrap: nowrap;
+}
+
+.items-start {
+  align-items: flex-start;
 }
 
 .items-center {
