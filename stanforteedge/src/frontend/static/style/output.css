@@ -2461,6 +2461,10 @@ body[dir="rtl"] .checkbox:checked,
   width: 6rem;
 }
 
+.w-44 {
+  width: 11rem;
+}
+
 .max-w-full {
   max-width: 100%;
 }
