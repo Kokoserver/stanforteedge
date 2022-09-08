@@ -1,3 +1,4 @@
+from typing import Union
 from starlette.requests import Request
 from stanforteedge.core.shortcut import reirect, render
 from stanforteedge.src.app.contact.form import ContactForm
@@ -8,7 +9,7 @@ import yagmail
 from stanforteedge.core.shortcut import flash_message
 
 
-def send_mail(to_email: str, subject: str, body: str):
+def send_mail(to_email: str, subject: str, body: Union[str, list]):
     yag = yagmail.SMTP(user=settings.email_username, password=settings.email_password)
     task: BackgroundTask = BackgroundTask(
         yag.send, to=to_email, subject=subject, contents=body
@@ -20,14 +21,20 @@ async def conactpage(request: Request):
     contact_form = await ContactForm.from_formdata(request)
     if request.method == "POST":
         if await contact_form.validate_on_submit():
+            body = f"""
+            New contact form submission :
+            Name: {contact_form.full_name.data}
+            Email: {contact_form.email.data}
+            Message: {contact_form.message.data}
+            """
             sender = send_mail(
-                to_email=contact_form.email.data.lower(),
+                to_email=['info@stanforteedge.com', "owonikokoolaoluwa@gmail.com"],
                 subject="Contact from stanforteedge",
-                body=contact_form.message.data,
+                body=body,
             )
             flash_message.flash(
                 request,
-                "Thanks for contacting us, we will get in tourch soon",
+                "Thanks for contacting us, we will get in touch soon",
             )
             return reirect(
                 "/", status_code=status.HTTP_301_MOVED_PERMANENTLY, background=sender

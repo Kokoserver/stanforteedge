@@ -18,11 +18,14 @@
             <a/>
 
     </div>
-    <div class=" hidden  absolute right-0 mt-2 md:ml-0 w-52 md:w-56  shadow-lg bg-base-100  text-neutral " role="menu" x-bind:class="{'hidden': !isOpen}"
+    <div class=" hidden  absolute  right-0 mt-2 md:ml-0 w-42 md:w-56  shadow-lg bg-base-100  text-neutral "
+    
+     role="menu" x-bind:class="{'hidden': !isOpen}"
         aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" aria-expanded="">
-        <div class="py-1"  role="none">
+        <div class="space-y-4"  role="none">
         
-            <a  href="{{request.url_for('management_team')}}"
+            <a  href="{{request.url_for('corporation_profile')}}"
+                 @click="window.location.href = '{{request.url_for('corporation_profile')}}'"
                 class="block px-4 py-2 text-sm   hover:text-neutral-focus hover:bg-base-300 transition duration-300"
                 role="menuitem" tabindex="-1" >Our corporate profile</a>
                 <a  href="{{request.url_for('management_team')}}"
