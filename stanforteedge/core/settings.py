@@ -18,10 +18,10 @@ crsf_key = __config("CRSf_KEY", cast=str, default="***REPLACEME***")
 
 email_host = __config("EMAIL_HOST", cast=str, default="smtp.gmail.com")
 email_port = __config("EMAIL_PORT", cast=int, default=587)
-email_username = __config("EMAIL_HOST_USER", cast=str, default="owonikokoolaoluwa@gmail.com")
+email_username = __config("EMAIL_HOST_USER", cast=str, default="you passed")
 email_password = __config("EMAIL_HOST_PASSWORD", cast=str, default="08089223577Ola*")
 
-db_username = __config('DB_NAME', cast=str, default='')
+db_username = __config('DB_USERNAME', cast=str, default='')
 db_password = __config('DB_PASSWORD', cast=str, default='')
 db_host = __config('DB_HOST', cast=str, default='localhost')
 db_name = __config('DB_NAME', cast=str, default='')
