@@ -1,8 +1,8 @@
 from starlette.applications import Starlette
-from .core import settings
-from .src.app.base import base_router
-# from db.config import app_startup
-from .core import middleware
+from stanforteedge.core import settings
+from stanforteedge.src.app.base import base_router
+# from stanforteedge.db.config import app_startup
+from stanforteedge.core import middleware
 
 app = Starlette(
     debug=settings.debug, routes=base_router.routers, middleware=middleware.wares

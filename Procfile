@@ -1,1 +1,1 @@
-web: uvicorn --host 0.0.0.0 --port $PORT stanforteedge.main:app
+web: uvicorn  stanforteedge.main:app --host 0.0.0.0 --port $PORT
